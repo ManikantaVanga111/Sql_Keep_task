@@ -91,9 +91,13 @@ select * from category where category_creator=(select user1_id from note where n
 select * from note where user1_id=112244
 
 ---6Fetch all the Notes from the Note table for category_id=1.
+select * from note
+select * from category
 select * from note where user1_id=(select category_creator from category where category_id=1)
 
 ---7Fetch all the reminder details for note id=2.
+select * from reminder 
+select * from note
 select * from reminder where reminder_creator=(select user1_id from note where note_id=2)
 
 ---8Write a query to change the note_status to ‘Completed’ with note Id=3.
